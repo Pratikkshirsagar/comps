@@ -13,10 +13,9 @@ function Link({ to, children, className, activeClassname }) {
   const handleClick = (event) => {
     if (event.metaKey || event.ctrlKey) {
       return;
-    } else {
-      event.preventDefault();
-      navigate(to);
     }
+    event.preventDefault();
+    navigate(to);
   };
 
   return (
